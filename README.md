@@ -12,7 +12,7 @@
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | [hello-world](https://github.com/rockey5520/exercism-go/blob/master/Hello-World/README.md) | [solution](https://github.com/rockey5520/exercism-go/blob/master/Hello-World/hello_world.go) |
 | [two-fer](https://exercism.io/my/solutions/cac6ea730bdf4127a9aa96cc2871e5c6) | [solution](https://github.com/rockey5520/exercism-java/blob/master/two-fer/src/main/java/Twofer.java) |
-| [hamming](https://github.com/rockey5520/exercism-go/blob/master/hamming/README.md) | [solution](https://github.com/rockey5520/exercism-go/blob/master/hamming/hamming.go) |
+| [hamming](https://exercism.io/my/solutions/2cf40dcc9de5472382f9a70d76ba9548) |                           solution                           |
 | [leapyear](https://github.com/rockey5520/exercism-go/blob/master/leap/README.md) | [solution](https://github.com/rockey5520/exercism-go/blob/master/leap/leap.go) |
 | [triangle](https://github.com/rockey5520/exercism-go/blob/master/README.md) | [solution](https://github.com/rockey5520/exercism-go/blob/master/triangle/triangle.go) |
 | [proverb](https://github.com/rockey5520/exercism-go/blob/master/proverb/README.md) | [solution](https://github.com/rockey5520/exercism-go/blob/master/proverb/proverb.go) |
