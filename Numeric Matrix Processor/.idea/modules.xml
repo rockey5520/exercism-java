@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Numeric_Matrix_Processor.iml" filepath="$PROJECT_DIR$/.idea/modules/Numeric_Matrix_Processor.iml" group="Numeric_Matrix_Processor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Numeric Matrix Processor/task/Numeric_Matrix_Processor-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Numeric Matrix Processor/task/Numeric_Matrix_Processor-task.iml" group="Numeric_Matrix_Processor/Numeric_Matrix_Processor-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Numeric Matrix Processor/task/Numeric_Matrix_Processor-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Numeric Matrix Processor/task/Numeric_Matrix_Processor-task_main.iml" group="Numeric_Matrix_Processor/Numeric_Matrix_Processor-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Numeric Matrix Processor/task/Numeric_Matrix_Processor-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Numeric Matrix Processor/task/Numeric_Matrix_Processor-task_test.iml" group="Numeric_Matrix_Processor/Numeric_Matrix_Processor-task" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Are siblings/Problems-Are_siblings.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Are siblings/Problems-Are_siblings.iml" group="Numeric_Matrix_Processor/Problems-Are_siblings" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Are siblings/Problems-Are_siblings_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Are siblings/Problems-Are_siblings_main.iml" group="Numeric_Matrix_Processor/Problems-Are_siblings" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Are siblings/Problems-Are_siblings_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Are siblings/Problems-Are_siblings_test.iml" group="Numeric_Matrix_Processor/Problems-Are_siblings" />
