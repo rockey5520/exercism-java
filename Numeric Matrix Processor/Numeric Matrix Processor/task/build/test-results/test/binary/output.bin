@@ -4,6 +4,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 1
@@ -28,6 +30,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -37,6 +41,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 1
@@ -64,6 +70,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -73,6 +81,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 2
@@ -85,14 +95,16 @@
 Enter a constant:
 > 17
 The multiplication result is:
-187.0 3978.0 7548.0 
-7752.0 5831.0 3774.0 
-16949.0 7752.0 7752.0 
+ 187.000000  3978.000000  7548.000000 
+ 7752.000000  5831.000000  3774.000000 
+ 16949.000000  7752.000000  7752.000000 
 
 1. Add matrices
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -102,6 +114,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 2
@@ -115,15 +129,17 @@
 Enter a constant:
 > 111
 The multiplication result is:
-	1123653.0 	5933505.0 1.10927295E8 	2365632.0 
-	1505049.0 	8619594.0 2.5665531E7 	3833274.0 
-	1366632.0 	2598732.0 3.7999962E7 5.8303305E7 
-1.1068143E7 	9781653.0 1.3666653E7 1.3443321E7 
+ 1123653.000000  5933505.000000  110927295.000000  2365632.000000 
+ 1505049.000000  8619594.000000  25665531.000000  3833274.000000 
+ 1366632.000000  2598732.000000  37999962.000000  58303305.000000 
+ 11068143.000000  9781653.000000  13666653.000000  13443321.000000 
 
 1. Add matrices
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -133,6 +149,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 3
@@ -165,6 +183,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -174,6 +194,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 3
@@ -197,6 +219,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -206,6 +230,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 3
@@ -232,6 +258,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -241,6 +269,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 3
@@ -268,6 +298,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -277,6 +309,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 3
@@ -304,6 +338,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 3
@@ -330,6 +366,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -339,6 +377,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 4
@@ -355,14 +395,16 @@
 > 6 6 4
 > 4 2 1
 The matrix transposition is: 
-1.0 6.0 4.0 
-7.0 6.0 2.0 
-7.0 4.0 1.0 
+	 1.000000 	 6.000000 	 4.000000 
+	 7.000000 	 6.000000 	 2.000000 
+	 7.000000 	 4.000000 	 1.000000 
 
 1. Add matrices
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -372,6 +414,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 4
@@ -388,14 +432,16 @@
 > 6 6 4
 > 4 5 1
 The matrix transposition is: 
-1.0 6.0 4.0 
-7.0 6.0 5.0 
-7.0 4.0 1.0 
+	 1.000000 	 6.000000 	 4.000000 
+	 7.000000 	 6.000000 	 5.000000 
+	 7.000000 	 4.000000 	 1.000000 
 
 1. Add matrices
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -405,6 +451,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 4
@@ -428,6 +476,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -437,6 +487,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 4
@@ -461,6 +513,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -470,6 +524,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 4
@@ -498,6 +554,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0
@@ -507,6 +565,8 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 4
@@ -535,6 +595,67 @@
 $2. Multiply a matrix to a constant
 3. Multiply matrices
 4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
+	0. Exit
+ Your choice: 
+> 0
+[1;31m
+Start test 16[0m
+1. Add matrices
+$2. Multiply a matrix to a constant
+3. Multiply matrices
+4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
+	0. Exit
+ Your choice: 
+> 5
+Enter the size of the matrix: 
+> 3 3
+Enter the matrix:
+> 1 2 3
+> 4 5 7
+> 10 22 23
+"The determinant of the matrix is: 
+31.0
+
+1. Add matrices
+$2. Multiply a matrix to a constant
+3. Multiply matrices
+4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
+	0. Exit
+ Your choice: 
+> 0
+[1;31m
+Start test 17[0m
+1. Add matrices
+$2. Multiply a matrix to a constant
+3. Multiply matrices
+4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
+	0. Exit
+ Your choice: 
+> 5
+Enter the size of the matrix: 
+> 4 4
+Enter the matrix:
+> 2.65 3.54 3.88 8.99
+> 3.12 5.45 7.77 5.56
+> 5.31 2.23 2.33 9.81
+> 1.67 1.67 1.01 9.99
+"The determinant of the matrix is: 
+45.219727119999874
+
+1. Add matrices
+$2. Multiply a matrix to a constant
+3. Multiply matrices
+4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
 	0. Exit
  Your choice: 
 > 0

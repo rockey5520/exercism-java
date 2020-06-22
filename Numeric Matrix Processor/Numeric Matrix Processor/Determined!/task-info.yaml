@@ -588,5 +588,5 @@ files:
     \        System.out.print(\" \");\n      }\n      System.out.println();\n    }*/\n"
   learner_created: true
 feedback_link: https://hyperskill.org/projects/60/stages/327/implement
-status: Unchecked
+status: Solved
 record: 5
