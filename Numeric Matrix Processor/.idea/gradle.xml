@@ -11,7 +11,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Numeric Matrix Processor/task" />
+            <option value="$PROJECT_DIR$/Problems/Alternating Fibonacci numbers" />
             <option value="$PROJECT_DIR$/Problems/Are siblings" />
+            <option value="$PROJECT_DIR$/Problems/N-th power" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>
