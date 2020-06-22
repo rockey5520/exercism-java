@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="NumericMatrixProcessorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-22T16:03:08" hostname="DESKTOP-17V4FVN" time="1.311">
+<testsuite name="NumericMatrixProcessorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-22T16:05:52" hostname="DESKTOP-17V4FVN" time="0.925">
   <properties/>
-  <testcase name="start" classname="NumericMatrixProcessorTest" time="1.311"/>
+  <testcase name="start" classname="NumericMatrixProcessorTest" time="0.925"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 1. Add matrices
@@ -640,6 +640,70 @@ Enter the matrix:
 > 1.67 1.67 1.01 9.99
 The determinant of the matrix is: 
 45.219727119999874
+
+1. Add matrices
+2. Multiply a matrix to a constant
+3. Multiply matrices
+4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+ Your choice: 
+> 0
+?[1;31m
+Start test 18?[0m
+1. Add matrices
+2. Multiply a matrix to a constant
+3. Multiply matrices
+4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+ Your choice: 
+> 6
+Enter the size of the matrix: 
+> 3 3
+Enter the matrix:
+> 0.396796 -0.214938 0.276735
+> 5.19655 -2.06983 -0.388886
+> -3.3797 1.50219 0.159794
+The inverse matrix is: 
+ 1.147169  2.037169  2.971104 
+ 2.190554  4.520551  7.207880 
+ 3.670086  0.590087  1.338194 
+
+1. Add matrices
+2. Multiply a matrix to a constant
+3. Multiply matrices
+4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+ Your choice: 
+> 0
+?[1;31m
+Start test 19?[0m
+1. Add matrices
+2. Multiply a matrix to a constant
+3. Multiply matrices
+4. Transpose a matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+ Your choice: 
+> 6
+Enter the size of the matrix: 
+> 4 4
+Enter the matrix:
+> 2.65 3.54 3.88 8.99
+> 3.12 5.45 7.77 5.56
+> 5.31 2.23 2.33 9.81
+> 1.67 1.67 1.01 9.99
+The inverse matrix is: 
+ 0.396796 -0.214938  0.276735 -0.509200 
+ 5.196548 -2.069827 -0.388886 -3.142518 
+-3.379699  1.502188  0.159794  2.048423 
+-0.593332  0.230065  0.002593  0.503450 
 
 1. Add matrices
 2. Multiply a matrix to a constant

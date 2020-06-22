@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
   public static void main(String[] args) {
-    //Stage 5
+    //Stage 5 & 6
     Scanner sc = new Scanner(System.in);
     int n;
     int m;

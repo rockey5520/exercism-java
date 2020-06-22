@@ -461,6 +461,301 @@ files:
 
     }
   learner_created: false
+- name: src/processor/Main.java
+  visible: true
+  text: "package processor;\n\nimport java.util.Scanner;\n\npublic class Main {\n\n\
+    \  public static void main(String[] args) {\n    //Stage 5\n    Scanner sc = new\
+    \ Scanner(System.in);\n    int n;\n    int m;\n    double [][] mA;\n    double\
+    \ [][] mB;\n\n    while(true) {\n      System.out.println(\"1. Add matrices\\\
+    r\\n\" +\n          \"2. Multiply a matrix to a constant\\r\\n\" +\n         \
+    \ \"3. Multiply matrices\\r\\n\" +\n          \"4. Transpose a matrix\\r\\n\"\
+    \ +\n          \"5. Calculate a determinant\\r\\n\" +\n          \"6. Inverse\
+    \ matrix\\r\\n\" +\n          \"0. Exit\\r\\n Your choice: \");\n      switch\
+    \ (sc.nextInt()) {\n        case 0:\n          return;\n        case 1:\n    \
+    \      System.out.println(\"Enter the size of the first matrix: \");\n       \
+    \   n = sc.nextInt();\n          m = sc.nextInt();\n          mA = new double\
+    \ [n][m];\n          System.out.println(\"Enter the first matrix:\");\n      \
+    \    for(int i = 0; i<n; i++) {\n            for(int j = 0; j<m; j++) {\n    \
+    \          mA[i][j] = sc.nextDouble();\n            }\n          }\n         \
+    \ System.out.println(\"Enter the size of the second matrix: \");\n          if(n\
+    \ != sc.nextInt() ||\tm != sc.nextInt()) {\n            System.out.println(\"\
+    ERROR\");\n            System.out.println();\n            sc.nextInt();\n    \
+    \        break;\n          }\n          System.out.println(\"Enter the second\
+    \ matrix:\");\n          mB = new double [n][m];\n          for(int i = 0; i<n;\
+    \ i++) {\n            for(int j = 0; j<m; j++) {\n              mB[i][j] = sc.nextDouble();\n\
+    \            }\n          }\n          System.out.println(\"The addition result\
+    \ is: \");\n          add(mA, mB);\n          System.out.println();\n        \
+    \  break;\n        case 2:\n          System.out.println(\"Enter the size of a\
+    \ matrix: \");\n          n = sc.nextInt();\n          m = sc.nextInt();\n   \
+    \       mA = new double [n][m];\n          System.out.println(\"Enter a matrix:\"\
+    );\n          for(int i = 0; i<n; i++) {\n            for(int j = 0; j<m; j++)\
+    \ {\n              mA[i][j] = sc.nextDouble();\n            }\n          }\n \
+    \         System.out.println(\"Enter a constant:\");\n          double c = sc.nextInt();\n\
+    \          System.out.println(\"The multiplication result is:\");\n          printMatrix(multiplyMatrixConstant(mA,c));\n\
+    \          System.out.println();\n          break;\n        case 3:\n        \
+    \  System.out.println(\"Enter the size of the first matrix: \");\n          n\
+    \ = sc.nextInt();\n          m = sc.nextInt();\n          mA = new double [n][m];\n\
+    \          System.out.println(\"Enter the first matrix:\");\n          for(int\
+    \ i = 0; i<n; i++) {\n            for(int j = 0; j<m; j++) {\n              mA[i][j]\
+    \ = sc.nextDouble();\n            }\n          }\n          System.out.println(\"\
+    Enter the size of the second matrix: \");\n          if(m != sc.nextInt()) {\n\
+    \            System.out.println(\"ERROR\");\n            System.out.println();\n\
+    \            sc.nextInt();\n            break;\n          }\n          n = sc.nextInt();\n\
+    \          System.out.println(\"Enter the second matrix:\");\n          mB = new\
+    \ double [n][m];\n          for(int i = 0; i<m; i++) {\n            for(int j\
+    \ = 0; j<n; j++) {\n              mB[j][i] = sc.nextDouble();\n            }\n\
+    \          }\n          System.out.println(\"The multiplication result is: \"\
+    );\n          mulWithConstant(mA, mB);\n          System.out.println();\n    \
+    \      break;\n        case 4:\n          System.out.println(\"1. Main diagonal\\\
+    r\\n\" +\n              \"2. Side diagonal\\r\\n\" +\n              \"3. Vertical\
+    \ line\\r\\n\" +\n              \"4. Horizontal line\\r\\n Your choice: \");\n\
+    \          int choice = sc.nextInt();\n          if(choice<1 || choice>4) {\n\
+    \            System.out.println();\n            break;\n          }\n        \
+    \  System.out.println(\"Enter the size of the matrix: \");\n          n = sc.nextInt();\n\
+    \          m = sc.nextInt();\n          if(choice<3) {\n            if(n!=m) {\n\
+    \              System.out.println(\"ERROR: The matrix mast be square!\");\n  \
+    \            System.out.println();\n              break;\n            }\n    \
+    \      }\n          mA = new double [n][m];\n          System.out.println(\"Enter\
+    \ the matrix:\");\n          for(int i = 0; i<n; i++) {\n            for(int j\
+    \ = 0; j<m; j++) {\n              mA[i][j] = sc.nextDouble();\n            }\n\
+    \          };\n          System.out.println(\"The matrix transposition is: \"\
+    );\n          switch (choice) {\n            case 1:\n              printMatrix(matrixTranspositionMain(mA));\n\
+    \              System.out.println();\n              break;\n            case 2:\n\
+    \              mTS(mA);\n              break;\n            case 3:\n         \
+    \     mTV(mA);\n              break;\n            case 4:\n              mTH(mA);\n\
+    \              break;\n            default:\n              break;\n          }\n\
+    \          break;\n        case 5:\n\n          System.out.println(\"Enter the\
+    \ size of the matrix: \");\n          n = sc.nextInt();\n          if(n!=sc.nextInt())\
+    \ {\n            System.out.println(\"ERROR: The matrix mast be square!\");\n\
+    \            System.out.println();\n            break;\n          }\n        \
+    \  mA = new double [n][n];\n          System.out.println(\"Enter the matrix:\"\
+    );\n          for(int i = 0; i<n; i++) {\n            for(int j = 0; j<n; j++)\
+    \ {\n              mA[i][j] = sc.nextDouble();\n            }\n          };\n\
+    \          System.out.println(\"The determinant of the matrix is: \");\n     \
+    \     System.out.println(mD(mA));\n          System.out.println();\n         \
+    \ break;\n\n        case 6:\n\n          System.out.println(\"Enter the size of\
+    \ the matrix: \");\n          n = sc.nextInt();\n          if(n!=sc.nextInt())\
+    \ {\n            System.out.println(\"ERROR: The matrix mast be square!\");\n\
+    \            System.out.println();\n            break;\n          }\n        \
+    \  mA = new double [n][n];\n          System.out.println(\"Enter the matrix:\"\
+    );\n          for(int i = 0; i<n; i++) {\n            for(int j = 0; j<n; j++)\
+    \ {\n              mA[i][j] = sc.nextDouble();\n            }\n          };\n\
+    \          double det = mD(mA);\n          if(det==0) {\n            System.out.println(\"\
+    ERROR: The matrix is singular!\");\n            System.out.println();\n      \
+    \      break;\n          }\n          System.out.println(\"The inverse matrix\
+    \ is: \");\n          mI(mA, det);\n          System.out.println();\n        \
+    \  break;\n\n        default:\n          break;\n      }\n\n    }\n  }\n\n  private\
+    \ static void mI(double[][] matrixA, double det) {\n    double [][] matrix = matrixTranspositionMain(matrixA);\n\
+    \    double [][] matrixC = cofMat(matrix);\n    det = 1/det;\n    printMatrix(multiplyMatrixConstant(matrixC,\
+    \ det));\n  }\n\n  private static double[][] cofMat(double[][] matrixA) {\n  \
+    \  int n = matrixA.length;\n    double[][] matrixC = new double [n][n];\n    double[][]\
+    \ matrixB = new double [n-1][n-1];\n    for(int i = 0; i<n; i++) {\n      for(int\
+    \ j = 0; j<n; j++) {\n        matrixB = mMatrixByRow(matrixA, i,j);\n        matrixC[i][j]\
+    \ = ((i+j)%2==0?1:-1)* mD(matrixB);\n      }\n    }\n    return matrixC;\n  }\n\
+    \n\n  private static double mD(double[][] matrixA) {\n    int n = matrixA.length;\n\
+    \    if (n == 1 ) {return matrixA[0][0];}\n    if (n == 2 ) {\n      return matrixA[0][0]*matrixA[1][1]-matrixA[0][1]*matrixA[1][0];\n\
+    \    }\n    double det = 0;\n    double[][] matrixB = new double [n-1][n-1];\n\
+    \    for(int j = 0; j<n; j++) {\n      matrixB = MinorMatrixBy1row(matrixA, j);\n\
+    \      det+= (j%2==0?1:-1)*matrixA[0][j]* mD(matrixB);\n    }\n\n    return det;\n\
+    \  }\n\n  private static double[][] MinorMatrixBy1row(double[][] matrixA, int\
+    \ jIndex) {\n    int n = matrixA.length;\n    double[][] matrixB = new double\
+    \ [n-1][n-1];\n    for(int i = 1; i<n; i++) {\n      for(int j = 0, k = 0; j<n;\
+    \ j++, k++) {\n        if(jIndex == j) {\n          k--;\n          continue;\n\
+    \        }\n        matrixB[i-1][k] = matrixA[i][j];\n      }\n    };\n    return\
+    \ matrixB;\n  }\n\n  private static double[][] mMatrixByRow(double[][] matrixA,\
+    \ int iIndex, int jIndex) {\n    int n = matrixA.length;\n    double[][] matrixB\
+    \ = new double [n-1][n-1];\n    for(int i = 0, l = 0; i<n; i++, l++) {\n     \
+    \ if(iIndex == i) {\n        l--;\n        continue;\n      }\n      for(int j\
+    \ = 0, k = 0; j<n; j++, k++) {\n        if(jIndex == j) {\n          k--;\n  \
+    \        continue;\n        }\n        matrixB[l][k] = matrixA[i][j];\n      }\n\
+    \    };\n    return matrixB;\n  }\n\n\n  private static void mTV(double[][] matrix)\
+    \ {\n    for(int i = 0; i<matrix.length; i++) {\n      for(int j = 0; j<matrix[0].length;\
+    \ j++) {\n        System.out.print(matrix[i][matrix[0].length-1-j]);\n       \
+    \ System.out.print(\" \");\n      }\n      System.out.println();\n    }\n  }\n\
+    \n  private static void mTH(double[][] matrix) {\n    for(int i = 0; i<matrix.length;\
+    \ i++) {\n      for(int j = 0; j<matrix[0].length; j++) {\n        System.out.print(matrix[matrix.length-1-i][j]);\n\
+    \        System.out.print(\" \");\n      }\n      System.out.println();\n    }\n\
+    \  }\n\n  static void mTS(double[][] matrix) {\n    for(int i = 0; i<matrix.length;\
+    \ i++) {\n      for(int j = 0; j<matrix.length; j++) {\n        System.out.print(matrix[matrix.length-1-j][matrix.length-1-i]);\n\
+    \        System.out.print(\" \");\n      }\n      System.out.println();\n    }\n\
+    \n  }\n\n  static void add(double[][] matrixA, double[][] matrixB) {\n    for(int\
+    \ i = 0; i<matrixA.length; i++) {\n      for(int j = 0; j<matrixA[0].length; j++)\
+    \ {\n        System.out.print(matrixA[i][j]+matrixB[i][j]);\n        System.out.print(\"\
+    \ \");\n      }\n      System.out.println();\n    }\n  }\n\n  static double[][]\
+    \ multiplyMatrixConstant(double[][] matrix, double c) {\n    int n = matrix.length;\n\
+    \    int m = matrix[0].length;\n    double[][] matrixM = new double[n][m];\n \
+    \   for(int i = 0; i<n; i++) {\n      for(int j = 0; j<m; j++) {\n        matrixM[i][j]\
+    \ = matrix[i][j]*c;\n      }\n    }\n    return matrixM;\n  }\n\n  static void\
+    \ mulWithConstant(double[][] matrixA, double[][] matrixB) {\n    double resMatrix\
+    \ = 0;\n    for(int i = 0; i<matrixA.length; i++) {\n      for(int j = 0; j<matrixB.length;\
+    \ j++) {\n        for (int k = 0; k < matrixA[0].length; k++) {\n          resMatrix\
+    \ += matrixA[i][k]*matrixB[j][k];\n        }\n        System.out.print(resMatrix);\n\
+    \        resMatrix = 0;\n        System.out.print(\" \");\n      }\n      System.out.println();\n\
+    \    }\n  }\n\n  static double[][] matrixTranspositionMain(double[][] matrix)\
+    \ {\n    int n = matrix.length;\n    double[][] matrixT = new double [n][n];\n\
+    \    for(int i = 0; i<n; i++) {\n      for(int j = 0; j<n; j++) {\n        matrixT[i][j]\
+    \ = matrix[j][i];\n      }\n    }\n    return matrixT;\n  }\n\n  static void printMatrix\
+    \ (double [][] matrix) {\n    int n = matrix.length;\n    for(int i = 0; i<n;\
+    \ i++) {\n      for(int j = 0; j<n; j++) {\n        if(j == 0) System.out.printf(\"\
+    % #.6f\", matrix[i][j]);\n        else System.out.printf(\"% #8.6f\", matrix[i][j]);\n\
+    \        System.out.print(\" \");\n      }\n      System.out.println();\n    }\n\
+    \n\n    /*//Stage 4\n    Scanner sc = new Scanner(System.in);\n    int n;\n  \
+    \  int m;\n    double [][] mA;\n    double [][] mB;\n\n    while(true) {\n   \
+    \   System.out.println(\"1. Add matrices\\r\\n\" +\n          \"2. Multiply a\
+    \ matrix to a constant\\r\\n\" +\n          \"3. Multiply matrices\\r\\n\" +\n\
+    \          \"4. Transpose a matrix\\r\\n\" +\n          \"0. Exit\\r\\n Your choice:\
+    \ \");\n      switch (sc.nextInt()) {\n        case 0:\n          return;\n  \
+    \      case 1:\n          System.out.println(\"Enter the size of the first matrix:\
+    \ \");\n          n = sc.nextInt();\n          m = sc.nextInt();\n          mA\
+    \ = new double [n][m];\n          System.out.println(\"Enter the first matrix:\"\
+    );\n          for(int i = 0; i<n; i++) {\n            for(int j = 0; j<m; j++)\
+    \ {\n              mA[i][j] = sc.nextDouble();\n            }\n          }\n \
+    \         System.out.println(\"Enter the size of the second matrix: \");\n   \
+    \       if(n != sc.nextInt() ||\tm != sc.nextInt()) {\n            System.out.println(\"\
+    ERROR\");\n            System.out.println();\n            sc.nextInt();\n    \
+    \        break;\n          }\n          System.out.println(\"Enter the second\
+    \ matrix:\");\n          mB = new double [n][m];\n          for(int i = 0; i<n;\
+    \ i++) {\n            for(int j = 0; j<m; j++) {\n              mB[i][j] = sc.nextDouble();\n\
+    \            }\n          }\n          System.out.println(\"The addition result\
+    \ is: \");\n          add(mA, mB);\n          System.out.println();\n        \
+    \  break;\n        case 2:\n          System.out.println(\"Enter the size of a\
+    \ matrix: \");\n          n = sc.nextInt();\n          m = sc.nextInt();\n   \
+    \       mA = new double [n][m];\n          System.out.println(\"Enter a matrix:\"\
+    );\n          for(int i = 0; i<n; i++) {\n            for(int j = 0; j<m; j++)\
+    \ {\n              mA[i][j] = sc.nextDouble();\n            }\n          }\n \
+    \         System.out.println(\"Enter a constant:\");\n          double c = sc.nextInt();\n\
+    \          System.out.println(\"The multiplication result is:\");\n          multiplyByConstant(mA,c);\n\
+    \          System.out.println();\n          break;\n        case 3:\n        \
+    \  System.out.println(\"Enter the size of the first matrix: \");\n          n\
+    \ = sc.nextInt();\n          m = sc.nextInt();\n          mA = new double [n][m];\n\
+    \          System.out.println(\"Enter the first matrix:\");\n          for(int\
+    \ i = 0; i<n; i++) {\n            for(int j = 0; j<m; j++) {\n              mA[i][j]\
+    \ = sc.nextDouble();\n            }\n          }\n          System.out.println(\"\
+    Enter the size of the second matrix: \");\n          if(m != sc.nextInt()) {\n\
+    \            System.out.println(\"ERROR\");\n            System.out.println();\n\
+    \            sc.nextInt();\n            break;\n          }\n          n = sc.nextInt();\n\
+    \          System.out.println(\"Enter the second matrix:\");\n          mB = new\
+    \ double [n][m];\n          for(int i = 0; i<m; i++) {\n            for(int j\
+    \ = 0; j<n; j++) {\n              mB[j][i] = sc.nextDouble();\n            }\n\
+    \          }\n          System.out.println(\"The multiplication result is: \"\
+    );\n          multiply(mA, mB);\n          System.out.println();\n          break;\n\
+    \        case 4:\n          System.out.println(\"1. Main diagonal\\r\\n\" +\n\
+    \              \"2. Side diagonal\\r\\n\" +\n              \"3. Vertical line\\\
+    r\\n\" +\n              \"4. Horizontal line\\r\\n Your choice: \");\n       \
+    \   int choice = sc.nextInt();\n          if(choice<1 || choice>4) {\n       \
+    \     System.out.println();\n            break;\n          }\n          System.out.println(\"\
+    Enter the size of the matrix: \");\n          n = sc.nextInt();\n          m =\
+    \ sc.nextInt();\n          if(choice<3) {\n            if(n!=m) {\n          \
+    \    System.out.println(\"ERROR: The matrix mast be square!\");\n            \
+    \  System.out.println();\n              break;\n            }\n          }\n \
+    \         mA = new double [n][m];\n          System.out.println(\"Enter the matrix:\"\
+    );\n          for(int i = 0; i<n; i++) {\n            for(int j = 0; j<m; j++)\
+    \ {\n              mA[i][j] = sc.nextDouble();\n            }\n          };\n\
+    \          System.out.println(\"The matrix transposition is: \");\n          switch\
+    \ (choice) {\n            case 1:\n              matrixTranspositionMainDiagonal(mA);\n\
+    \              System.out.println();\n              break;\n            case 2:\n\
+    \              matrixTranspositionSidediagonal(mA);\n              break;\n  \
+    \          case 3:\n              matrixTranspositionVerticalline(mA);\n     \
+    \         break;\n            case 4:\n              matrixTranspositionHorisontalline(mA);\n\
+    \              break;\n            default:\n              break;\n          }\n\
+    \n\n        default:\n          break;\n      }\n\n    }\n  }\n\n  private static\
+    \ void matrixTranspositionVerticalline(double[][] matrix) {\n    for(int i = 0;\
+    \ i<matrix.length; i++) {\n      for(int j = 0; j<matrix[0].length; j++) {\n \
+    \       System.out.print(matrix[i][matrix[0].length-1-j]);\n        System.out.print(\"\
+    \ \");\n      }\n      System.out.println();\n    }\n  }\n\n  private static void\
+    \ matrixTranspositionHorisontalline(double[][] matrix) {\n    for(int i = 0; i<matrix.length;\
+    \ i++) {\n      for(int j = 0; j<matrix[0].length; j++) {\n        System.out.print(matrix[matrix.length-1-i][j]);\n\
+    \        System.out.print(\" \");\n      }\n      System.out.println();\n    }\n\
+    \  }\n\n  static void matrixTranspositionSidediagonal(double[][] matrix) {\n \
+    \   for(int i = 0; i<matrix.length; i++) {\n      for(int j = 0; j<matrix.length;\
+    \ j++) {\n        System.out.print(matrix[matrix.length-1-j][matrix.length-1-i]);\n\
+    \        System.out.print(\" \");\n      }\n      System.out.println();\n    }\n\
+    \n  }\n\n  static void add(double[][] matrixA, double[][] matrixB) {\n    for(int\
+    \ i = 0; i<matrixA.length; i++) {\n      for(int j = 0; j<matrixA[0].length; j++)\
+    \ {\n        System.out.print(matrixA[i][j]+matrixB[i][j]);\n        System.out.print(\"\
+    \ \");\n      }\n      System.out.println();\n    }\n  }\n\n  static void multiplyByConstant(double[][]\
+    \ matrix, double c) {\n    for(int i = 0; i<matrix.length; i++) {\n      for(int\
+    \ j = 0; j<matrix[0].length; j++) {\n        System.out.print(matrix[i][j]*c);\n\
+    \        System.out.print(\" \");\n      }\n      System.out.println();\n    }\n\
+    \  }\n\n  static void multiply(double[][] matrixA, double[][] matrixB) {\n   \
+    \ double resMatrix = 0;\n    for(int i = 0; i<matrixA.length; i++) {\n      for(int\
+    \ j = 0; j<matrixB.length; j++) {\n        for (int k = 0; k < matrixA[0].length;\
+    \ k++) {\n          resMatrix += matrixA[i][k]*matrixB[j][k];\n        }\n   \
+    \     System.out.print(resMatrix);\n        resMatrix = 0;\n        System.out.print(\"\
+    \ \");\n      }\n      System.out.println();\n    }\n  }\n\n  static void matrixTranspositionMainDiagonal(double[][]\
+    \ matrix) {\n    for(int i = 0; i<matrix.length; i++) {\n      for(int j = 0;\
+    \ j<matrix.length; j++) {\n        System.out.print(matrix[j][i]);\n        System.out.print(\"\
+    \ \");\n      }\n      System.out.println();\n    }\n*/\n    //stage 3\n    /*Scanner\
+    \ sc = new Scanner(System.in);\n    int n;\n    int m;\n    double[][] mA;\n \
+    \   double[][] mB;\n\n    while (true) {\n      System.out.println(\"1. Add matrices\\\
+    r\\n\" +\n          \"2. Multiply matrix to a constant\\r\\n\" +\n          \"\
+    3. Multiply matrices\\r\\n\" +\n          \"0. Exit\\r\\n Your choice: \");\n\
+    \      switch (sc.nextInt()) {\n        case 0:\n          return;\n        case\
+    \ 1:\n          System.out.println(\"Enter the size of the first matrix: \");\n\
+    \          n = sc.nextInt();\n          m = sc.nextInt();\n          mA = new\
+    \ double[n][m];\n          System.out.println(\"Enter the first matrix:\");\n\
+    \          for (int i = 0; i < n; i++) {\n            for (int j = 0; j < m; j++)\
+    \ {\n              mA[i][j] = sc.nextDouble();\n            }\n          }\n \
+    \         System.out.println(\"Enter the size of the second matrix: \");\n   \
+    \       if (n != sc.nextInt() || m != sc.nextInt()) {\n            System.out.println(\"\
+    ERROR\");\n            System.out.println();\n            sc.nextInt();\n    \
+    \        break;\n          }\n          System.out.println(\"Enter the second\
+    \ matrix:\");\n          mB = new double[n][m];\n          for (int i = 0; i <\
+    \ n; i++) {\n            for (int j = 0; j < m; j++) {\n              mB[i][j]\
+    \ = sc.nextDouble();\n            }\n          }\n          System.out.println(\"\
+    The addition result is: \");\n          add(mA, mB);\n          System.out.println();\n\
+    \          break;\n        case 2:\n          System.out.println(\"Enter the size\
+    \ of a matrix: \");\n          n = sc.nextInt();\n          m = sc.nextInt();\n\
+    \          mA = new double[n][m];\n          System.out.println(\"Enter a matrix:\"\
+    );\n          for (int i = 0; i < n; i++) {\n            for (int j = 0; j < m;\
+    \ j++) {\n              mA[i][j] = sc.nextDouble();\n            }\n         \
+    \ }\n          System.out.println(\"Enter a constant:\");\n          double c\
+    \ = sc.nextInt();\n          System.out.println(\"The multiplication result is:\"\
+    );\n          multiplyByConstant(mA, c);\n          System.out.println();\n  \
+    \        break;\n        case 3:\n          System.out.println(\"Enter the size\
+    \ of the first matrix: \");\n          n = sc.nextInt();\n          m = sc.nextInt();\n\
+    \          mA = new double[n][m];\n          System.out.println(\"Enter the first\
+    \ matrix:\");\n          for (int i = 0; i < n; i++) {\n            for (int j\
+    \ = 0; j < m; j++) {\n              mA[i][j] = sc.nextDouble();\n            }\n\
+    \          }\n          System.out.println(\"Enter the size of the second matrix:\
+    \ \");\n          if (m != sc.nextInt()) {\n            System.out.println(\"\
+    ERROR\");\n            System.out.println();\n            sc.nextInt();\n    \
+    \        break;\n          }\n          n = sc.nextInt();\n          System.out.println(\"\
+    Enter the second matrix:\");\n          mB = new double[n][m];\n          for\
+    \ (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n     \
+    \         mB[j][i] = sc.nextDouble();\n            }\n          }\n          System.out.println(\"\
+    The multiplication result is: \");\n          multiply(mA, mB);\n          System.out.println();\n\
+    \          break;\n        default:\n          break;\n      }\n\n    }\n  }\n\
+    \n  static void add(double[][] matrixA, double[][] matrixB) {\n    for (int i\
+    \ = 0; i < matrixA.length; i++) {\n      for (int j = 0; j < matrixA[0].length;\
+    \ j++) {\n        System.out.print(matrixA[i][j] + matrixB[i][j]);\n        System.out.print(\"\
+    \ \");\n      }\n      System.out.println();\n    }\n  }\n\n  static void multiplyByConstant(double[][]\
+    \ matrix, double c) {\n    for (int i = 0; i < matrix.length; i++) {\n      for\
+    \ (int j = 0; j < matrix[0].length; j++) {\n        System.out.print(matrix[i][j]\
+    \ * c);\n        System.out.print(\" \");\n      }\n      System.out.println();\n\
+    \    }\n  }\n\n  static void multiply(double[][] matrixA, double[][] matrixB)\
+    \ {\n    double resMatrix = 0;\n    for (int i = 0; i < matrixA.length; i++) {\n\
+    \      for (int j = 0; j < matrixB.length; j++) {\n        for (int k = 0; k <\
+    \ matrixA[0].length; k++) {\n          resMatrix += matrixA[i][k] * matrixB[j][k];\n\
+    \        }\n        System.out.print(resMatrix);\n        resMatrix = 0;\n   \
+    \     System.out.print(\" \");\n      }\n      System.out.println();\n    }*/\n\
+    \   /* //stage 2\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n\
+    \    int m = sc.nextInt();\n    int[][] matrixA = new int[n][m];\n    for (int\
+    \ i = 0; i < n; i++) {\n      for (int j = 0; j < m; j++) {\n        matrixA[i][j]\
+    \ = sc.nextInt();\n      }\n    }\n    int c = sc.nextInt();\n\n    for (int[]\
+    \ integer : matrixA\n    ) {\n      for (Integer integer1 : integer\n      ) {\n\
+    \        System.out.print(integer1 * c);\n        System.out.print(\" \");\n \
+    \     }\n      System.out.println();\n    }*/\n  }\n\n}\n//Stage 1\n    /*Scanner\
+    \ sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    int m = sc.nextInt();\n\
+    \    int[][] matrixA = new int[n][m];\n    for (int i = 0; i < n; i++) {\n   \
+    \   for (int j = 0; j < m; j++) {\n        matrixA[i][j] = sc.nextInt();\n   \
+    \   }\n    }\n    if (n != sc.nextInt() || m != sc.nextInt()) {\n      System.out.println(\"\
+    ERROR\");\n      return;\n    }\n    int[][] matrixB = new int[n][m];\n    for\
+    \ (int i = 0; i < n; i++) {\n      for (int j = 0; j < m; j++) {\n        matrixB[i][j]\
+    \ = sc.nextInt();\n      }\n    }\n\n    for (int i = 0; i < n; i++) {\n     \
+    \ for (int j = 0; j < m; j++) {\n        System.out.print(matrixA[i][j] + matrixB[i][j]);\n\
+    \        System.out.print(\" \");\n      }\n      System.out.println();\n    }*/\n"
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/60/stages/328/implement
-status: Unchecked
+status: Solved
 record: -1
